@@ -9,20 +9,19 @@ body {
   color: #4B7EC9;
 }
 .control_pad{
-/*  border: 1px solid black;
-*/  margin-left: 100px;
+  margin-left: 100px;
   width:400px;
   float:left;
 }
 
 .btn{
-  width: 100px;
-  height:100px;
+  width:  100px;
+  height: 100px;
 }
 
 .btn-success{
-  margin-left:130px;
-  margin-bottom:5px;
+  margin-left:   130px;
+  margin-bottom:   5px;
 }
 
 .btn-inverse{
