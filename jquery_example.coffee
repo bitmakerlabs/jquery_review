@@ -42,19 +42,27 @@ $ ->
 # 5.2 Clean AJAX: Best Practices
 
 class DrinksController
+  # Synonomous to initialize in ruby
   constructor: ->
     @$el = $(".drinks")
     @$list = @$el.find("ul")
-    @$filter = @$el.find(".filter").on "keyup", @_onFilterChange
+    @$filter = @$el.find(".filter")
+
+    # Binding the list update functionality the filter input
+    @$filter.on "keyup", @_onFilterChange
+    # Get the intial, unfiltered list of beers
     @get()
 
   _onFilterChange: (e) =>
     return if @$filter.val() == @previousVal
     @previousVal = @$filter.val()
-    @get @$filter.val()
+    @get()
 
-  get: (query="", page=1) ->
+  get: (page=1) ->
+    # we only want the latest filtered request to be rendered so kill the previous request
     @_request.abort() if @_request?
+
+    query = @$filter.val()
     url = "http://lcboapi.com/products?q=#{query}&page=#{page}"
     @_request = $.ajax url, dataType: "jsonp", success: @_onAjaxSuccess
 
