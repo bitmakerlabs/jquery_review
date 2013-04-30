@@ -8,3 +8,50 @@ body {
 .blue {
   color: #4B7EC9;
 }
+.control_pad{
+/*  border: 1px solid black;
+*/  margin-left: 100px;
+  width:400px;
+  float:left;
+}
+
+.btn{
+  width: 100px;
+  height:100px;
+}
+
+.btn-success{
+  margin-left:130px;
+  margin-bottom:5px;
+}
+
+.btn-inverse{
+  margin-top:5px;
+}
+
+.left{
+  margin-left:65px;
+}
+
+h1{
+  text-align: center;
+}
+
+.slider {
+/*  border: 1px solid black;
+*/  width:100px;
+  float:left;
+  margin-left:50px;
+}
+
+#amount{
+  width:75px;
+}
+
+.btn-primary {
+  width: 300px;
+  height: 50px;
+  overflow: auto;
+  margin-top: 5px;
+  margin-left: 125px;
+}

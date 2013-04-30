@@ -24,3 +24,21 @@ $(document).ready ->
   console.log $('div.container ul.list li').length
   $('div.container ul.list li').on "click", ->
     $(@).toggleClass "green"
+
+  $ ->
+    $("#slider-vertical").slider
+      orientation: "vertical"
+      range: "min"
+      min: 0
+      max: 100
+      value: 60
+      slide: (event, ui) -> 
+        $("#amount").val( ui.value )
+    
+    $("#amount").val $("#slider-vertical").slider("value")
+
+
+
+
+
+
