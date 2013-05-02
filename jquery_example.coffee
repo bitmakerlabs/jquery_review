@@ -1,24 +1,37 @@
-# Toggle different classes on certain elements
-# $(function() {
-#   $('div.container ul.list li').on("click", function(){
-#     $(this).toggleClass('green')
-#   })
-# })
-
 # http://jqfundamentals.com/chapter/jquery-basics
 # AND http://learn.shayhowe.com/advanced-html-css/jquery
+
+# JQuery Topics 
+# ----------------------------------------------
 
 # 1. Toggleclass, add, remove
 # 2. Chaining methods (closest, children, find)
 # 3. Getting and Setting (.attr, .data, .val)
 # 4. How to use Events
 # 5. AJAX
+
+
+
+
+
+
+
+
+
+
+
+# -----------------------------------------------------------------------
+
+# AJAX
+# ---------
 #   - url (only required parameter),
 #   - type (default is get),
 #   - success (RESPONSE SENT),
 #   - dataType (usually json or jsonp),
 #   - data (emulating a form submission - can pass it a JS object, THIS IS THE REQUEST)
-# http://lcboapi.com/products?q=waupoos&callback=wordd
+
+
+basic = false
 
 $ ->
   $drinksList = $(".drinks ul")
@@ -31,12 +44,13 @@ $ ->
 
 
   # 5.1 Basic AJAX
-  # $.ajax "http://lcboapi.com/products?q=waupoos",
-  #   type: "POST"
-  #   dataType: "jsonp"
-  #   success: (response) ->
-  #     for item in response.result
-  #       $drinksList.append("<li>#{item.name} - #{item.alcohol_content*1.0/100}%</li>")
+  return unless basic
+  $.ajax "http://lcboapi.com/products?q=waupoos",
+    type: "POST"
+    dataType: "jsonp"
+    success: (response) ->
+      for item in response.result
+        $drinksList.append("<li>#{item.name} - #{item.alcohol_content*1.0/100}%</li>")
 
 
 # 5.2 Clean AJAX: Best Practices
@@ -50,6 +64,7 @@ class DrinksController
 
     # Binding the list update functionality the filter input
     @$filter.on "keyup", @_onFilterChange
+
     # Get the intial, unfiltered list of beers
     @get()
 
@@ -75,5 +90,5 @@ class DrinksController
   _compileHtml:(item) ->
     "<li>#{item.name} - #{item.alcohol_content*1.0/100}%</li>"
 
-$ -> new DrinksController()
+$ -> new DrinksController() unless basic
 
