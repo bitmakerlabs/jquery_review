@@ -1,56 +1,34 @@
 body {
-  font-size: 50px;
   font-weight: bold;
 }
-.green {
-  color: #64A438;
+
+header{
+  margin-left: 20px;
+  margin-top: 20px;
 }
-.blue {
-  color: #4B7EC9;
+
+header h1{
+  /*text-align: center;*/
+  font-size: 50px;
 }
+
 .control_pad{
-  margin-left: 100px;
-  width:400px;
-  float:left;
+  margin: 0 auto;
+  width: intrinsic;
+  margin-top: 100px;
 }
 
 .btn{
+  font-size: 17px;
   width:  100px;
   height: 100px;
-}
-
-.btn-success{
-  margin-left:   130px;
-  margin-bottom:   5px;
-}
-
-.btn-inverse{
-  margin-top:5px;
-}
-
-.left{
-  margin-left:65px;
-}
-
-h1{
-  text-align: center;
-}
-
-.slider {
-/*  border: 1px solid black;
-*/  width:100px;
-  float:left;
-  margin-left:50px;
-}
-
-#amount{
-  width:75px;
-}
-
-.btn-primary {
-  width: 300px;
-  height: 50px;
-  overflow: auto;
   margin-top: 5px;
-  margin-left: 125px;
+}
+
+.btn p {
+  margin-top: 35%;
+}
+
+.btn-success, .btn-warning{
+  margin-left: 130px;
 }
