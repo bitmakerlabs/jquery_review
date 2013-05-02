@@ -14,7 +14,7 @@ $(function() {
   // the code you want to run when that button is clicked.
   
   // We've given each button in the browser a name. These names are hastags, just like in Twitter,
-  // and they are: #up, #down, #right, #left, and #stop.
+  // and they are: #forward, #reverse, #right, #left, and #stop.
   
   // The second thing we need to know how to do is send the robot commands. We do this using AJAX.
   // AJAX is a lot like sending an email to someone: you need an address and a message. It looks like this:
@@ -27,7 +27,7 @@ $(function() {
   // If you want to make it go forward, the message would be: 
   // { forward: +1 }
   
-  // Backward:
+  // Reverse:
   // { forward: -1 }
   
   // Right: 
