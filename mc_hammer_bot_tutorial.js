@@ -1,10 +1,10 @@
 $(function() {
   // We all know the future lies with robots, so to help you jumpstart your career
   // we've written a tutorial for you to learn how to control one.
-  // In Chrome you can see there are five buttons. We want you 
-  // to make it so clicking these buttons move the robot.
-  
-  // To do that the first thing you need to know is when the button is clicked. This is done with: 
+  // In Chrome you can see there are five buttons. We want you make these buttons
+  // be able to move the robot around.
+
+  // The first thing you need to know is when a button is clicked. This is done with:
   
   // $(button).on("click", function() {
   //    
@@ -13,7 +13,7 @@ $(function() {
   // You just have to put in place of button the name of the button, and after function() inside the { }
   // the code you want to run when that button is clicked.
   
-  // We've given each button in the browser a name. These names are hastags, just like in Twitter,
+  // We've given each button in the browser a name. These names are hashtags, just like in Twitter,
   // and they are: #forward, #reverse, #right, #left, and #stop.
   
   // The second thing we need to know how to do is send the robot commands. We do this using AJAX.
@@ -39,5 +39,8 @@ $(function() {
   // Stop:
   // {}
   
-  // That's all you need to know! Now go forth young one!
+  // That's all you need to know! Now write the code below!
+
+
+  
 }
